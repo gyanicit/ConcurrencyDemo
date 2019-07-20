@@ -7,7 +7,7 @@ import java.util.concurrent.Future;
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class ExecutorServiceWithThreadFactory extends Thread {
+public class ExecutorServiceWithThreadFactory {
 	public static void main(String[] args) {
 		ExecutorService ex = Executors.newFixedThreadPool(5, new MyThreadFactory("Test"));
 		Future<String> s = ex.submit(new Callable<String>() {
